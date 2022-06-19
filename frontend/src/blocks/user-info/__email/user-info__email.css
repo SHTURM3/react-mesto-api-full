@@ -1,0 +1,8 @@
+.user-info__email {
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    margin: 0 24px 0 0;
+}

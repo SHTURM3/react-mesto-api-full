@@ -1,0 +1,9 @@
+.elements__img {
+    max-width: 282px;
+    width: 100%;
+    min-height: 282px;
+    max-height: 282px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: -5px;
+    cursor: pointer;
+}

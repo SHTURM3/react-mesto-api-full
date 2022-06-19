@@ -1,0 +1,11 @@
+.user__input {
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 0 5px 0;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+}

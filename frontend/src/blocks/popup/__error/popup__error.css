@@ -1,0 +1,16 @@
+.popup__error {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    color: #ff0000;
+    max-width: 358px;
+    margin-bottom: 13px;
+    font-family: Inter, Arial, 'sans-serif';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.popup__error:last-of-type {
+    margin-bottom: 0;
+}

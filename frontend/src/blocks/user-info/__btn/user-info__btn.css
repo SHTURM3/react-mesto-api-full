@@ -1,0 +1,16 @@
+.user-info__btn {
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    text-decoration: none;
+}
+
+.user-info__btn:hover {
+    opacity: 0.6;
+}
