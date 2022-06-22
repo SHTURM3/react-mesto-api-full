@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9651a259.css",
+    "main.js": "/static/js/main.f5952870.js",
+    "static/js/787.5530211c.chunk.js": "/static/js/787.5530211c.chunk.js",
+    "static/media/Inter-Medium.woff": "/static/media/Inter-Medium.f4f762ae1cf4e40da1b7.woff",
+    "static/media/Inter-Black.woff": "/static/media/Inter-Black.a132c194c0911ad3c03c.woff",
+    "static/media/Inter-Regular.woff": "/static/media/Inter-Regular.43b06493b971a736350a.woff",
+    "static/media/Inter-Medium.woff2": "/static/media/Inter-Medium.fc363d8cd82d767f5e94.woff2",
+    "static/media/Inter-Black.woff2": "/static/media/Inter-Black.3bdfa4418cfa7b81331b.woff2",
+    "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.c589ce3fdce51055d84b.woff2",
+    "static/media/logo.svg": "/static/media/logo.bbe2a6eafac19c3d031c272c424875ca.svg",
+    "static/media/like-hover.svg": "/static/media/like-hover.b93875dd5932f7a1c019.svg",
+    "static/media/like.svg": "/static/media/like.1ad06e85f169668a1f36.svg",
+    "index.html": "/index.html",
+    "static/media/trash-btn.svg": "/static/media/trash-btn.e3c42771bff3aaa52f76.svg",
+    "static/media/wrong-register.svg": "/static/media/wrong-register.d4ce2a261b68c6da973d51ef98afae1a.svg",
+    "static/media/accept-register.svg": "/static/media/accept-register.a9eb6caf1da3ff48b215fb1dd9477d74.svg",
+    "static/media/like-button-active.svg": "/static/media/like-button-active.35948469632d0421d697.svg",
+    "static/media/close-icon-hover.svg": "/static/media/close-icon-hover.dbc981e96123197bbde3.svg",
+    "static/media/close-btn.svg": "/static/media/close-btn.973e77374abfb705de40.svg",
+    "static/media/edit-button-hover.svg": "/static/media/edit-button-hover.6c7bf05444b9793fdf6e.svg",
+    "static/media/edit-button.svg": "/static/media/edit-button.6c7bf05444b9793fdf6e.svg",
+    "static/media/edit-avatar-btn.svg": "/static/media/edit-avatar-btn.ae1a976ddb506239e9f0.svg",
+    "static/media/add-button-hover.svg": "/static/media/add-button-hover.2dab956234a2703e05dc.svg",
+    "static/media/add-button.svg": "/static/media/add-button.bed8c136e13907f5eefb.svg",
+    "main.9651a259.css.map": "/static/css/main.9651a259.css.map",
+    "main.f5952870.js.map": "/static/js/main.f5952870.js.map",
+    "787.5530211c.chunk.js.map": "/static/js/787.5530211c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9651a259.css",
+    "static/js/main.f5952870.js"
+  ]
+}
