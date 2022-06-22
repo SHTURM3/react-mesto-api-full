@@ -1,4 +1,6 @@
 const jwt = require('jsonwebtoken');
+
+const { NODE_ENV, JWT_SECRET } = process.env;
 const Unauthorized = require('../errors/Unauthorized');
 
 const extractBearerToken = (header) => header.replace('Bearer ', '');
@@ -14,7 +16,7 @@ module.exports = (request, _, next) => {
   let payload;
 
   try {
-    payload = jwt.verify(token, 'yandex-practicum-thebest');
+    payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'yandex-practicum-thebest');
   } catch (err) {
     return next(new Unauthorized('Необходима авторизация.'));
   }

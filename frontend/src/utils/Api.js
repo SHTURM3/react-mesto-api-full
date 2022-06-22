@@ -4,6 +4,13 @@ class Api {
       this._baseUrl = baseUrl;
     }
 
+    get _headers() {
+        return {
+          'Content-Type': 'application/json',
+          authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        }
+    }
+
     _checkResponse(res) {
         return res.ok ? res.json() : Promise.reject(res.status)
     }
