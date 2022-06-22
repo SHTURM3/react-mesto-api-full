@@ -5,6 +5,7 @@ const { userRouter } = require('./routes/users');
 const { cardRouter } = require('./routes/card');
 const { login, createUser } = require('./controlers/users');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const cors = require('cors');
 const auth = require('./middlewares/auth');
 const NotFound = require('./errors/NotFound');
 
@@ -12,11 +13,13 @@ const regEx = /(?:(http|https):\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
-const app = express();
-
 const { PORT = 3000 } = process.env;
 
+const app = express();
+
 app.use(express.json());
+
+app.use(cors());
 
 app.use(requestLogger);
 
