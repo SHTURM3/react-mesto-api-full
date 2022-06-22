@@ -157,7 +157,7 @@ function App() {
         }
         setInfotoolTipStatus(true);
         setInfoTool(true);
-        history.push("/signin");
+        history.push("/sign-in");
       })
       .catch((err) => {
         console.log('ErrorReg: ', err);
@@ -204,7 +204,7 @@ function App() {
   function handleSignOut () {
     localStorage.removeItem('jwt');
     setLoggedIn(false);
-    history.push("/signin");
+    history.push("/sign-in");
   }
 
   //Запросы данных пользователя и карточек с сервера и проверка токена
@@ -261,11 +261,11 @@ function App() {
 
                 </ProtectedRoute>
 
-                <Route path="/signin">
+                <Route path="/sign-in">
                   <Header 
                     userData=''
                   >
-                    <Link className="user-info__btn" to="/signup">Зарегестрироваться</Link> 
+                    <Link className="user-info__btn" to="/sign-up">Зарегестрироваться</Link> 
                   </Header>
                   
                   <Login handleLogin={handleLogin} />
@@ -276,11 +276,11 @@ function App() {
                   />
                 </Route>
 
-                <Route path="/signup">
+                <Route path="/sign-up">
                   <Header 
                     userData=''
                   >
-                    <Link className="user-info__btn" to="/signin">Вход</Link>
+                    <Link className="user-info__btn" to="/sign-in">Вход</Link>
                   </Header>
                   <Register handleRegister={handleRegister} />
                   <InfoTooltip 
