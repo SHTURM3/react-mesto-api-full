@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors, celebrate, Joi } = require('celebrate');
+const cors = require('cors');
 const { userRouter } = require('./routes/users');
 const { cardRouter } = require('./routes/card');
 const { login, createUser } = require('./controlers/users');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const cors = require('cors');
 const auth = require('./middlewares/auth');
 const NotFound = require('./errors/NotFound');
 
