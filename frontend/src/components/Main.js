@@ -23,11 +23,11 @@ function Main(props) {
                 <button type="submit" className="profile__add-button" onClick={props.onAddPlace}></button>
             </section>
             <section className="elements">
-                <ul className="elements__list">
+                <ul className="elements__list"  >
                     {props.cards.map((card) => (
                         <Card 
-                            key={card._id} 
-                            card={card} 
+                            card={card}
+                            key={card._id}
                             onCardClick={props.onCardClick} 
                             onCardLike={props.onCardLike} 
                             onCardDelete={props.onCardDelete}

@@ -27,10 +27,18 @@ function App() {
   const history = useHistory();
 
   // Стейт переменная информации о пользователе
-  const [currentUser, setCurrentUser ] = React.useState({});
+  const [currentUser, setCurrentUser ] = React.useState({
+    about: "",
+    avatar: "",
+    name: "",
+    _id: ""
+  });
 
   // Стейт переменная карточки места
-  const [selectedCard, setSelectedCard] = React.useState({});
+  const [selectedCard, setSelectedCard] = React.useState({
+    name: "",
+    link: ""
+  });
 
   //Стейт переменные состояния информации по карточкам
   const [cards, setCards] = React.useState([]);

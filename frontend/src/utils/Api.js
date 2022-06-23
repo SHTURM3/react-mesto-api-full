@@ -1,6 +1,5 @@
 class Api {
-    constructor({baseUrl, headers}) {
-      this._headers = headers;
+    constructor({ baseUrl }) {
       this._baseUrl = baseUrl;
     }
 
@@ -85,7 +84,7 @@ class Api {
   }
   
 const api = new Api({
-    baseUrl: 'https://api.mesto.vizetann.nomoredomains.xyz', 
+    baseUrl: 'http://api.mesto.vizetann.nomoredomains.xyz', 
 });
   
 export default api;

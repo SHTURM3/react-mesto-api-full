@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.mesto.vizetann.nomoredomains.xyz';
+export const BASE_URL = 'http://api.mesto.vizetann.nomoredomains.xyz';
 
 const checkResponse = (response) => {
     console.log('response: ', response);
