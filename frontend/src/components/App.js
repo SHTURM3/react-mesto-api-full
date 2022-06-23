@@ -27,18 +27,10 @@ function App() {
   const history = useHistory();
 
   // Стейт переменная информации о пользователе
-  const [currentUser, setCurrentUser ] = React.useState({
-    about: "",
-    avatar: "",
-    name: "",
-    _id: ""
-  });
+  const [currentUser, setCurrentUser ] = React.useState({});
 
   // Стейт переменная карточки места
-  const [selectedCard, setSelectedCard] = React.useState({
-    name: "",
-    link: ""
-  });
+  const [selectedCard, setSelectedCard] = React.useState({});
 
   //Стейт переменные состояния информации по карточкам
   const [cards, setCards] = React.useState([]);
@@ -224,6 +216,7 @@ function App() {
     if(loggedIn) {
       api.getProfile()
       .then(res => {
+        console.log(res);
         setCurrentUser(res);
       })
       .catch( res => {
