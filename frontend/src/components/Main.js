@@ -5,7 +5,8 @@ import CurrentUserContext from '../contexts/CurrentUserContext';
 function Main(props) {
     // Подписка на контекст CurrentUserContext
     const currentUser = React.useContext(CurrentUserContext);
-
+    console.log('currentUser ==>', currentUser);
+    console.log('currentUser ==>', currentUser.data);
     return (
         <main className="content">
             <section className="profile">

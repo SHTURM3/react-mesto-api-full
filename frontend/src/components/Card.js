@@ -7,18 +7,18 @@ function Card(props) {
     const currentUser = React.useContext(CurrentUserContext);
 
     // Отображение иконки удаления
-    console.log('Card =>', props.card);
-    console.log('Card Owner =>', props.card.owner);
-    console.log('currentUser All =>', currentUser);
-    const isOwn = props.card.owner === currentUser.data._id;
+    // console.log('Card =>', props.card);
+    // console.log('Card Owner =>', props.card.owner);
+    // console.log('currentUser All =>', currentUser);
+    const isOwn = props.card.owner === currentUser._id;
     const cardDeleteButtonClassName = (
         `elements__trash-btn ${isOwn ? 'elements__trash-btn_visible' : 'elements__trash-btn_hidden'}`
     );
 
     // Отображение иконки like
-    console.log('likes =>', props.card.likes);
-    console.log('currentUser ID =>', currentUser.data._id);
-    const isLiked = props.card.likes.some(i => i === currentUser.data._id); // console.log('i =>', i)
+    // console.log('likes =>', props.card.likes);
+    // console.log('currentUser ID =>', currentUser.data._id);
+    const isLiked = props.card.likes.some(i => i === currentUser._id ); // console.log('i =>', i)
     const cardLikeButtonClassName = (
         `elements__btn-like ${isLiked ? 'elements__btn-like_active' : '' }`
     );

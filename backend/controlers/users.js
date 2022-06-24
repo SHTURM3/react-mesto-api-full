@@ -69,7 +69,7 @@ const getCurrentUser = (request, response, next) => {
         throw new NotFound('Запрашиваемый пользователь не найден.');
       }
 
-      return response.send({ data: user });
+      return response.send(user);
     })
     .catch((err) => next(err));
 };

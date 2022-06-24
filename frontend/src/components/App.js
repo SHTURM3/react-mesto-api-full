@@ -76,6 +76,7 @@ function App() {
   function handleUpdateUser(userInfo) {
     api.setUserInfo(userInfo.name, userInfo.about)
       .then(res => {
+        console.log('res User ==>', res);
         setCurrentUser({...currentUser,
         name: res.name,
         about: res.about
@@ -91,6 +92,7 @@ function App() {
   function handleUpdateAvatar(userInfo) {
     api.changeAvatar(userInfo.avatar)
       .then( res => {
+        //console.log('resAvatar ==>', res);
         setCurrentUser({...currentUser,
         avatar: res.avatar
         })
@@ -103,12 +105,16 @@ function App() {
 
   // Поддержка лайков и дизлайков
   function handleCardLike(card) {
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    
+    const isLiked = card.likes.some(i => i === currentUser._id );
+
+    console.log('card ==>', card);
 
     if(!isLiked) {
       api.addLike(card._id)
         .then((newCard) => {
-          setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+          //console.log('newCard =>', newCard.card);
+          setCards((state) => state.map((c) => c._id === card._id ? newCard : c)); // console.log('c ==>', c)
         })
         .catch( res => {
           console.log(res);
@@ -116,6 +122,7 @@ function App() {
     } else {
         api.deleteLike(card._id)
           .then((newCard) => {
+            console.log('newCard =>', newCard);
             setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
           })
           .catch( res => {
@@ -193,7 +200,7 @@ function App() {
         if(res){
           console.log('checkToken: ', res);
           setUserData({
-            email: res.data.email,
+            email: res.email,
           });
           setLoggedIn(true);
         }

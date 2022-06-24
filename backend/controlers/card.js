@@ -14,7 +14,7 @@ const dislikeCard = (request, response, next) => {
       if (!card) {
         throw new NotFound('Данный пост не существует или удалён ранее.');
       }
-      return response.status(200).send({ message: 'Пост отмечен как не понравившейся.' });
+      return response.status(200).send(card);
     })
     .catch((err) => {
       if (err.kind === 'ObjectId') {
