@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const YOUR_JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI1MDM2YTVhZDZjZDdhYjM4OTQ1OWEiLCJpYXQiOjE2NTYwNjM5MDMsImV4cCI6MTY1NjY2ODcwM30.yfwVYwlHGcpXAT592HJZw2MrOh9Brc3RJfD9G8lZiAo'; // вставьте сюда JWT, который вернул публичный сервер студента
+const YOUR_JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI0NmY1NDdkYmVlN2I5MGEzMmJkYmEiLCJpYXQiOjE2NTYwODE0MjIsImV4cCI6MTY1NjY4NjIyMn0.ao8NIvCi590J4s3MML25F3PHLq5RaSzJxJdR2bSoCKk'; // вставьте сюда JWT, который вернул публичный сервер студента
 const SECRET_KEY_DEV = 'yandex-practicum-thebest'; // вставьте сюда секретный ключ для разработки из кода студента
 try {
   // eslint-disable-next-line no-unused-vars

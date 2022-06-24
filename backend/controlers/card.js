@@ -56,7 +56,7 @@ const deleteCard = (request, response, next) => {
         throw new Forbidden('Вы не можете удалить пост другого пользователя.');
       }
       return card.remove()
-        .then(() => response.send({ data: card }));
+        .then(() => response.send(card));
     })
     .catch((err) => {
       if (err.kind === 'ObjectId') {

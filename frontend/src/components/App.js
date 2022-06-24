@@ -146,12 +146,8 @@ function App() {
   // Поддержка удаления карточек
   function handleCardDelete(card) {
     api.deleteCard(card._id)
-      .then((card) => {
-        setCards((state) => state.filter((c) => c._id === card._id ? card.remove() : c));
-      })
-      .catch( res => {
-        console.log(res);
-      })
+      .then(() => setCards(state => state.filter(c => c._id !== card._id)))
+      .catch(err => console.log(err));
   }
 
   function handleRegister (email, password) {
@@ -223,7 +219,7 @@ function App() {
     if(loggedIn) {
       api.getProfile()
       .then(res => {
-        console.log(res);
+        //console.log(res);
         setCurrentUser(res);
       })
       .catch( res => {
@@ -232,6 +228,7 @@ function App() {
     
       api.getInitialCards()
       .then( res => {
+        console.log('cards res =>', res);
         setCards(res);
       })
       .catch( res => {
@@ -241,6 +238,28 @@ function App() {
       return;
     }
   }, [loggedIn, history])
+
+  // React.useEffect(() => {
+  //   checkToken();
+  // }, []);
+
+  // React.useEffect(() => {
+  //   if (!loggedIn) {
+  //     history.push('/sign-in');
+  //     return;
+  //   }
+  // }, [loggedIn, history]);
+
+  // React.useEffect(() => {
+  //   if (loggedIn) {
+  //     Promise.all([api.getProfile(), api.getInitialCards()])
+  //       .then(([userData, cardsData]) => {
+  //         setCurrentUser(userData);
+  //         setCards(cardsData.reverse());
+  //       })
+  //       .catch(err => console.log(err));
+  //     }
+  // }, [loggedIn]);
 
   return (
     <div className="App">
