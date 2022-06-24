@@ -1,5 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+
+const { NODE_ENV, JWT_SECRET } = process.env;
 const User = require('../models/User');
 const BadRequest = require('../errors/BadRequest');
 const Conflict = require('../errors/Conflict');
@@ -122,12 +124,8 @@ const login = (request, response, next) => {
 
   return User.findUserByCredentials(email, password)
     .then((user) => {
-      if (!user) {
-        throw new BadRequest('Пользователь не найден.');
-      }
-      response.send({
-        token: jwt.sign({ _id: user._id }, 'yandex-practicum-thebest', { expiresIn: '7d' }),
-      });
+      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'yandex-practicum-thebest', { expiresIn: '7d' });
+      response.send({ token });
     })
     .catch(() => {
       next(new Unauthorized('Логин или пароль неверны.'));
