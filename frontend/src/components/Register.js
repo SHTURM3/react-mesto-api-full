@@ -32,7 +32,7 @@ function Register(props){
             <input id="password" type="password" name="password" value={state.password} onChange={handleChange} className="user__input user__input_password" placeholder="Пароль" autoComplete="off" required={true} />
             <button type="submit" className="user__btn">Зарегестрироваться</button>
             <p className="user__link">
-                <Link className="user__link" to="/sign-in">Уже зарегестрированы? Войти</Link>
+                <Link className="user__link" to="/signin">Уже зарегестрированы? Войти</Link>
             </p>
         </form>
     </div>

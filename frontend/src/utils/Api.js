@@ -84,7 +84,7 @@ class Api {
   }
   
 const api = new Api({
-    baseUrl: 'http://api.mesto.vizetann.nomoredomains.xyz', 
+    baseUrl: 'https://api.mesto.vizetann.nomoredomains.xyz', 
 });
   
 export default api;

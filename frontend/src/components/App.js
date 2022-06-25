@@ -160,7 +160,7 @@ function App() {
         }
         setInfotoolTipStatus(true);
         setInfoTool(true);
-        history.push("/sign-in");
+        history.push("/signin");
       })
       .catch((err) => {
         console.log('ErrorReg: ', err);
@@ -207,7 +207,7 @@ function App() {
   function handleSignOut () {
     localStorage.removeItem('jwt');
     setLoggedIn(false);
-    history.push("/sign-in");
+    history.push("/signin");
   }
 
   //Запросы данных пользователя и карточек с сервера и проверка токена
@@ -239,28 +239,6 @@ function App() {
     }
   }, [loggedIn, history])
 
-  // React.useEffect(() => {
-  //   checkToken();
-  // }, []);
-
-  // React.useEffect(() => {
-  //   if (!loggedIn) {
-  //     history.push('/sign-in');
-  //     return;
-  //   }
-  // }, [loggedIn, history]);
-
-  // React.useEffect(() => {
-  //   if (loggedIn) {
-  //     Promise.all([api.getProfile(), api.getInitialCards()])
-  //       .then(([userData, cardsData]) => {
-  //         setCurrentUser(userData);
-  //         setCards(cardsData.reverse());
-  //       })
-  //       .catch(err => console.log(err));
-  //     }
-  // }, [loggedIn]);
-
   return (
     <div className="App">
       <CurrentUserContext.Provider value={currentUser}>
@@ -288,11 +266,11 @@ function App() {
 
                 </ProtectedRoute>
 
-                <Route path="/sign-in">
+                <Route path="/signin">
                   <Header 
                     userData=''
                   >
-                    <Link className="user-info__btn" to="/sign-up">Зарегестрироваться</Link> 
+                    <Link className="user-info__btn" to="/signup">Зарегестрироваться</Link> 
                   </Header>
                   
                   <Login handleLogin={handleLogin} />
@@ -303,11 +281,11 @@ function App() {
                   />
                 </Route>
 
-                <Route path="/sign-up">
+                <Route path="/signup">
                   <Header 
                     userData=''
                   >
-                    <Link className="user-info__btn" to="/sign-in">Вход</Link>
+                    <Link className="user-info__btn" to="/signin">Вход</Link>
                   </Header>
                   <Register handleRegister={handleRegister} />
                   <InfoTooltip 
